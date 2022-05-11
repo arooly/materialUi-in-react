@@ -3,13 +3,13 @@ import { Badge, Tooltip, IconButton } from "@mui/material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import BasicMenu from "../../components/common/BasicMenu/BasicMenu";
 
-const NotificationsBell = ({ iconColor, badgeContent, onClick, anchorEl }) => {
+const NotificationsBell = ({ iconColor, badgeContent, onClick }) => {
   const newNotifications = `You have ${badgeContent} new notifications`;
   const noNotifications = "You have no notifications";
   return (
     <div>
       <Tooltip title={badgeContent ? newNotifications : noNotifications}>
-        <IconButton color={iconColor} onClick={handleOpen} anchorEl={anchorEl}>
+        <IconButton color={iconColor} onClick={handleOpen}>
           <Badge badgeContent={badgeContent} color="error">
             <NotificationsIcon />
           </Badge>
